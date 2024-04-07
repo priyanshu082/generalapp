@@ -1,0 +1,189 @@
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   text-align: center;
+   
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Comic Sans MS, sans-serif;
+    box-sizing: border-box;
+}
+
+.first{
+    background-image: url('solar7.jpg') ;
+    background-color: #0c0101;
+    justify-content: center;
+    align-items: baseline;
+    height: 300px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.second{
+    background-color:#2E5984 ;
+    align-items: center;
+}
+.third{
+    background-color: #528AAE;
+    align-items: center;
+    display: flex;
+}
+.third .content{
+    text-align: center;
+}
+.third p{
+    margin: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.third h3{
+    padding: 55px;
+}
+
+.fourth{
+    background-color: #73A5C6;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+.fourth p {
+    margin: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.fourth h3 {
+    padding: 55px;
+}
+.fifth{
+    background-color:#91BAD6;
+}
+.sixth{
+    background-color:#BCD2E8;
+}
+.all{
+    transition: transform .2s;
+}
+.all:hover{
+    transform: scale(1.5);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    max-width: 100%;
+}
+.container input{
+    display: none;
+}
+
+.panel input:checked ~ .content{
+    max-height: 100vh ;
+}
+.container .panel{
+    margin-bottom: 0px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.18) ;
+}
+.container .panel label{
+    background-color: rgba(255, 228, 196, 0);
+    padding: 5px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 99;
+}
+
+.container label .span{
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #0056b3;
+} 
+
+
+.container .panel .content p{
+    font-size: 1.5em;
+    padding: 15px 20px;
+}
+
+.container .panel .content{
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.panel {
+    
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline;
+}
+
+.panel:hover {
+    background-color: #0056b3; 
+}
+
+.panel.active {
+    background-color: #0074D9; 
+}
+
+.content {
+    padding: 10px;
+    background-color: #f9f9f900;
+}
+
+.content.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 50%;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .panel {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .container .panel label {
+        padding: 10px;
+    }
+
+    .container .panel p{
+        font-size: 50%;
+    }
+
+    .container .panel .content p {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .all {
+        height: 8%;
+        width: 8%;
+    }
+    .first {
+        height: auto;
+        padding: 50px 20px;
+    }
+}

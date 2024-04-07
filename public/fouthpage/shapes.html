@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shapes Learning</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        text-align: center;
+    }
+    h1 {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 40px; /* Increased font size */
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .shape {
+        display: inline-block;
+        margin: 20px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .shape:hover {
+        transform: scale(1.2); /* Increased scaling factor */
+    }
+    .shape svg {
+        width: 120px;
+        height: 120px;
+        fill: #FFD700; /* Yellow fill color */
+        stroke: transparent; /* Set stroke to transparent */
+        transition: fill 0.3s;
+    }
+    .shape:hover svg {
+        fill: #FF6347; /* Red fill color */
+    }
+    .shape-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 8px 12px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+    }
+    .shape:hover .shape-label {
+        opacity: 1;
+    }
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #555;
+    }
+</style>
+</head>
+<body style="background-color:#FFB6C1;">
+    <div class="container">
+        <h1>Let's Learn Shapes!</h1>
+        <div class="shape" onclick="showPopup('Square')" style="background-color: #FF6347;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <rect x="2" y="2" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+            <span class="shape-label">Square</span>
+        </div>
+        <div class="shape" onclick="showPopup('Triangle')" style="background-color: #FFD700;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <polygon points="12,2 22,21 2,21" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+            <span class="shape-label">Triangle</span>
+        </div>
+        <div class="shape" onclick="showPopup('Circle')" style="background-color: #20B2AA;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+            <span class="shape-label">Circle</span>
+        </div>
+        <div class="shape" onclick="showPopup('Rectangle')" style="background-color: #9370DB;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <rect x="2" y="4" width="20" height="16" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+            <span class="shape-label">Rectangle</span>
+        </div>
+        <div class="shape" onclick="showPopup('Hexagon')" style="background-color: #FFA500;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <polygon points="12,2 22,8 22,16 12,22 2,16 2,8" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+            <span class="shape-label">Hexagon</span>
+        </div>
+        <div class="shape" onclick="showPopup('Pentagon')" style="background-color: #FF69B4;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <polygon points="12,2 22,8 18,22 6,22 2,8" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+            <span class="shape-label">Pentagon</span>
+        </div>
+        <div class="shape" onclick="showPopup('Star')" style="background-color: #00FFFF;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <polygon points="12,2 14,8 20,8 15,12 17,18 12,14 7,18 9,12 4,8 10,8" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+            <span class="shape-label">Star</span>
+        </div>
+        <div class="shape" onclick="showPopup('Sphere')" style="background-color: #6495ED;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+                <circle cx="12" cy="12" r="10" fill="url(#sphere-gradient)" stroke="#fff" stroke-width="2"/>
+                <defs>
+                    <radialGradient id="sphere-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color: #ffffff; stop-opacity: 1"/>
+                        <stop offset="100%" style="stop-color: #6495ED; stop-opacity: 1"/>
+                    </radialGradient>
+                </defs>
+            </svg>
+            <span class="shape-label">Sphere</span>
+        </div>
+    </div>
+    
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="hidePopup()">×</span>
+            <h2 id="shape-title" style="color: #333;"></h2>
+            <p id="shape-description" style="color: #555;"></p>
+            <button onclick="hidePopup()" style="background-color: #FF6347; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(shape) {
+            var popup = document.getElementById('popup');
+            var title = document.getElementById('shape-title');
+            var description = document.getElementById('shape-description');
+            popup.style.display = 'block';
+            title.textContent = shape;
+            switch (shape) {
+                case 'Square':
+                    description.textContent = "A square is a shape with four equal sides and four right angles.";
+                    break;
+                case 'Triangle':
+                    description.textContent = "A triangle is a polygon with three edges and three vertices. It is one of the basic shapes in geometry.";
+                    break;
+                case 'Circle':
+                    description.textContent = "A circle is a simple closed shape. It is the set of all points in a plane that are at a given distance from a given point, the centre.";
+                    break;
+                case 'Rectangle':
+                    description.textContent = "A rectangle is a quadrilateral with four right angles.";
+                    break;
+                case 'Hexagon':
+                    description.textContent = "A hexagon is a six-sided polygon.";
+                    break;
+                case 'Pentagon':
+                    description.textContent = "A pentagon is a five-sided polygon.";
+                    break;
+                case 'Star':
+                    description.textContent = "A star is a shape with a number of points projecting from its core. The most common variant in vexillology is a five-pointed star, but many other possibilities exist.";
+                    break;
+                case 'Sphere':
+                    description.textContent = "A sphere is a perfectly round geometrical object in three-dimensional space that is the surface of a completely round ball.";
+                    break;
+            }
+        }
+
+        function hidePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

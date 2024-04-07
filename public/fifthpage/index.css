@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url("images/solar7.jpg");
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.box {
+    text-align: center;
+    transition: transform 0.5s ease;
+    margin-bottom: 20px; /* Add some space between boxes */
+}
+
+.box img {
+    border-radius: 0%;
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.sun img {
+    width: 250px; /* Set size for the sun */
+}
+
+.mercury img {
+    width: 100px; /* Set size for Mercury */
+}
+
+.venus img {
+    width: 120px; /* Set size for Venus */
+}
+
+.earth img {
+    width: 150px; /* Set size for Earth */
+}
+
+.mars img {
+    width: 130px; /* Set size for Mars */
+}
+
+.jupiter img {
+    width: 180px; /* Set size for Jupiter */
+}
+
+.saturn img {
+    width: 160px; /* Set size for Saturn */
+}
+
+.uranus img {
+    width: 110px; /* Set size for Uranus */
+}
+
+.neptune img {
+    width: 80px; /* Set size for Neptune */
+} 
+
+.box:hover {
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+        margin: 10px 0; /* Adjust width for smaller screens */
+    }
+
+    .box img{
+        height: 50%;
+        width: auto;
+    }
+
+    .sun img {
+        width: 200px; /* Adjust sun size for smaller screens */
+    }
+
+    .heading{
+        height: auto;
+    }
+}

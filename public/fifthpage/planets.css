@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 30px;
+    font-family: Comic Sans MS;
+    font-size: larger;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.content {
+    width: 80%;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(234, 231, 231, 0.96);
+    border-radius: 5px;
+    /* background-color: #f2f226a8; */
+    margin-right: 30px;
+}
+.content-container-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+   flex-direction: row-reverse;
+   margin-right: 30px;
+   margin-bottom: 30px;
+}
+
+.content-container-2 .content-container {
+    margin-top: 30px;
+}
+
+
+.flaticon {
+    color: #fff;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+}
+
+.rectangle-card {
+    width: 300px;
+    height: 300px;
+    background-color: #33333300;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin-right: 30px;
+}
+
+.rectangle-card:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+
+.rectangle-card:hover .flaticon {
+    color: #f00;
+}
+
+
+.sun {
+    background-color: #f2f226e0;
+}
+.sun:hover {
+    background-color: #f2f226f4;
+}
+
+.mercury {
+    background-color: #756f6fdf;
+    }
+.mercury:hover{
+    background-color: #5f5d5d;
+}
+
+.venus {
+    background-color: #f3970ecd;
+}
+
+.venus:hover {
+    background-color: #f5a608;
+}
+
+.earth {
+    background-color: #17f30bc6;
+}
+
+.earth:hover {
+    background-color: #3df809;
+}
+
+.mars {
+    background-color: #f30b0bc6;
+}
+
+.mars:hover {
+    background-color: #f80909;
+}
+
+.jupiter {
+    background-color: #f3640bc6;
+}
+
+.jupiter:hover {
+    background-color: #e77007;
+}
+
+.saturn {
+    background-color: #c5f30bc6;
+}
+
+.saturn:hover {
+    background-color: #bee707;
+}
+
+.uranus {
+    background-color: #0bf3ebc6;
+}
+
+.uranus:hover {
+    background-color: #07e0e7;
+}
+
+.neptune {
+    background-color: #0b68f3c6;
+}
+
+.neptune:hover {
+    background-color: #074ee7;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;        
+    }
+
+    .container-container{
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        margin-bottom: 20px;   
+    }
+
+    .rectangle-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        margin: 10px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .rectangle-card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .content {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .flaticon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .flaticon {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
+
+
+
+

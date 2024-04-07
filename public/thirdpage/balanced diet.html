@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balanced-diet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: myFirstFont;
+            src: url(3Dumb.ttf);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Outfit", sans-serif;
+
+        }
+
+        .container {
+            width: 1180px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-image: url(bg2.png);
+            background-repeat: repeat;
+            background-position: center center;
+            background-size: 20%;
+            display: flex;
+            align-items: center;
+        }
+
+        .box {
+            position: relative;
+            padding: 10px;
+            box-sizing: border-box;
+
+
+        }
+
+        .box h1 {
+            position: relative;
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 20px;
+            font-style: myFirstFont;
+        }
+
+        .box h1 span {
+            background-color: #fff;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .box p {
+            font-size: 13px;
+            position: relative;
+            text-align: center;
+            letter-spacing: 3px;
+            margin-top: 0px;
+        }
+
+        .box p span {
+            background-color: #fff;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .maping_img {
+            text-align: center;
+            width: 330px;
+            margin: 0 auto 35px;
+        }
+
+        .box img {
+            position: relative;
+            width: 100%;
+            background: white;
+            box-shadow: 0 5px 15px rgb(0, 0, 0, .5);
+        }
+
+        .containernew {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: coral;
+            padding: 10px 10px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .containernew1 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: #daa520;
+            padding: 10px 10px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .containernew2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: rgb(239, 32, 208);
+            padding: 10px 10px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .containernew3 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: rgb(30, 168, 218);
+            padding: 10px 10px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .containernew4 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: rgb(237, 50, 144);
+            padding: 10px 10px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .left-div {
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .left-div p {
+            text-align: left;
+            letter-spacing: normal;
+            line-height: 20px;
+            color: #000;
+        }
+
+        .right-div {
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .left-div1 {
+            padding: 20px;
+            height: fit-content;
+
+        }
+
+        .right-div1 {
+            padding: 20px;
+        }
+
+        .right-div1 p {
+            text-align: left;
+            letter-spacing: normal;
+            line-height: 20px;
+            color: #000;
+            height: fit-content;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .click-message {
+            animation: fadeIn 1s ease-in-out infinite, colorChange 5s infinite;
+            /* background: linear-gradient(to left,  #7998EE, #9075D8); */
+
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #163020;
+            }
+
+            50% {
+                color: #1B4242;
+            }
+
+            100% {
+                color: #5C8374;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+
+        <div class="container">
+            <div class="box">
+                <h1><span>BALANCED DIET<span></h1>
+                <p class="click-message"><span>CLICK ANYWHERE ON THE PICTURE!</span></p>
+                <div class="maping_img">
+                    <!-- <img src="balancediet1.png" usemap="#image-map"> -->
+                    <map name="image-map">
+                        <a href="#protein"> <area alt="" title="" href="#protein"
+                                coords="83,78,74,91,31,156,15,224,29,327,71,321,133,295,187,271,227,252,244,220,245,160,245,69,239,16,227,7,215,1"
+                                shape="poly"></a>
+                        <a href="#minerals"><area alt="" title="" href="#minerals"
+                                coords="251,8,252,38,253,84,255,148,255,212,257,249,306,280,369,316,431,350,469,322,488,225,469,156,393,59"
+                                shape="poly"></a>
+                        <a href="#vitamins"> <area alt="" title="" href="#vitamins"
+                                coords="256,262,303,285,365,320,407,345,442,371,416,411,370,449,312,477,277,481"
+                                shape="poly"></a>
+                        <a href="#carbohydrate"><area alt="" title="" href="#carbohydrate"
+                                coords="247,266,251,318,263,405,267,478,173,473" shape="poly"></a>
+                        <a href="#fats"> <area alt="" title="" href="#fats"
+                                coords="39,347,100,318,191,277,231,261,234,278,217,324,200,367,182,416,163,465,87,432,43,363"
+                                shape="poly"></a>
+                    </map>
+                </div>
+                <div class="containernew">
+                    <div class="left-div1" id="protein">
+                        <p>
+                        <h3> PROTIENS</h3>
+                        Proteins are crucial macromolecules found in all living organisms, composed of amino acids
+                        linked
+                        by peptide bonds. They perform diverse functions, including enzymatic catalysis, structural
+                        support, transport, signaling, and immune response regulation. Dietary proteins, obtained
+                        from
+                        various sources, are broken down into amino acids during digestion, which are then utilized
+                        for
+                        tissue growth, repair, and maintenance. Adequate and balanced protein intake is essential
+                        for
+                        overall health and bodily functions.</p>
+                    </div>
+                    <div class="right-div1">
+                        <img src="protiens.jpeg">
+                    </div>
+                </div>
+                <div class="containernew4">
+                    <div class="left-div1" id="carbohydrate">
+                        <p>
+                        <h3> CARBOHYDRATES</h3>
+
+                        Carbohydrates are vital for providing energy in a diet. They come in two types: simple
+                        (sugars) and complex (starches and fiber). Opting for complex carbohydrates like whole
+                        grains and vegetables over refined sugars promotes stable blood sugar levels and digestive
+                        health. However, overconsumption of refined carbohydrates can lead to weight gain and
+                        chronic diseases. Moderation and choosing nutrient-dense sources are key to maintaining a
+                        balanced diet.</p>
+                    </div>
+                    <div class="right-div1">
+                        <img src="carbohydrates.webp">
+                    </div>
+                </div>
+                <div class="containernew3">
+                    <div class="left-div1" id="fats">
+                        <p>
+                        <h3> FATS</h3>
+                        Dietary fats are essential for overall health, providing energy, aiding in vitamin
+                        absorption, and supporting various bodily functions. While saturated and trans fats can have
+                        negative health effects when consumed excessively, unsaturated fats from sources like nuts,
+                        seeds, and fatty fish offer numerous benefits, including improved heart health. A balanced
+                        diet includes moderate amounts of healthy fats while minimizing intake of unhealthy fats,
+                        emphasizing quality and quantity for optimal well-being.</p>
+                    </div>
+                    <div class="right-div1">
+                        <img src="fat1.jpeg">
+                    </div>
+                </div>
+                <div class="containernew2">
+                    <div class="left-div1" id="vitamins">
+                        <p>
+                        <h3> VITAMIN</h3>
+                        Proteins are crucial macromolecules found in all living organisms, composed of amino acids
+                        linked
+                        by peptide bonds. They perform diverse functions, including enzymatic catalysis, structural
+                        support, transport, signaling, and immune response regulation. Dietary proteins, obtained
+                        from
+                        various sources, are broken down into amino acids during digestion, which are then utilized
+                        for
+                        tissue growth, repair, and maintenance. Adequate and balanced protein intake is essential
+                        for
+                        overall health and bodily functions.</p>
+                    </div>
+                    <div class="right-div1">
+                        <img src="vitamins.jpeg">
+                    </div>
+                </div>
+                <div class="containernew1">
+                    <div class="left-div1" id="minerals">
+                        <p>
+                        <h3> MINERALS</h3>
+                        Minerals are vital for a balanced diet, supporting functions like bone health, muscle
+                        function, and immune system strength. Key minerals include calcium for bones, iron for
+                        oxygen transport, and potassium for fluid balance. Eating a variety of foods rich in
+                        minerals, such as fruits, vegetables, whole grains, and lean proteins, ensures overall
+                        well-being. Consulting a healthcare professional helps tailor mineral intake to individual
+                        needs, promoting optimal health and vitality.</p>
+                    </div>
+                    <div class="right-div1">
+                        <img src="minerals.jpg">
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
